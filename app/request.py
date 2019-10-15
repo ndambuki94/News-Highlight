@@ -56,3 +56,22 @@ def process_results(source_list):
             source_results.append(source_object)
     return source_results
 
+def get_article(id):
+    get_article_details_url = article_base_url.format(id,api_key)
+
+    with urllib.request.urlopen(get_article_details_url) as url:
+        article_details_data = url.read()
+        article_details_response = json.loads(article_details_data)
+
+
+
+
+
+        article_results = None
+
+        if article_details_response ['articles']:
+            article_results_list = article_details_response ['articles']
+            article_results = process_result(article_results_list)
+            
+    return article_results
+   
