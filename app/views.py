@@ -11,7 +11,7 @@ def index():
     popular_general = get_sources('general')
     upcoming_category = get_sources('business')
     now_showing_category = get_sources('sports')
-    title = 'Home - Welcome to The best Movie Review Website Online'
+    title = 'Home - Welcome to The best News Review Website Online'
 
 
     return render_template('index.html', title = title, popular =popular_general, upcoming =upcoming_category, now_showing = now_showing_category )
