@@ -4,6 +4,10 @@ class Config:
     '''
     pass
 
+    NEWS_API_BASE_URL ='https://newsapi.org/v2/sources?category={}&apiKey={}'
+    ARTICLE_API_BASE_URL='https://newsapi.org/v2/everything?q={}&apiKey={}'
+
+
 class ProdConfig(Config):
     '''
     Production  configuration child class
