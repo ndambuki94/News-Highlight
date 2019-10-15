@@ -1,0 +1,14 @@
+h1{
+    text-align:center;
+    color:burlywood; 
+    background-color: black;
+    height: 300px;
+    padding-top: 100px;
+
+}
+body{
+    background-color:blanchedalmond;
+ }
+ ul>li>a{
+ list-style-type: none;
+ }
