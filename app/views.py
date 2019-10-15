@@ -17,7 +17,16 @@ def index():
     return render_template('index.html', title = title, popular =popular_general, upcoming =upcoming_category, now_showing = now_showing_category )
 
 
+@app.route('/article/<id>')
+def article(id):
 
+    '''
+    View article page function that returns the article details page and its data
+    '''
+    article = get_article(id)
+    title = f'{id}'
+
+    return render_template('article.html',title = title,articles= article)
 
 
    
