@@ -1,0 +1,32 @@
+<!-- {% import 'macros.html' as macro%} -->
+<h1> NewsHighlight {{ id }} </h1>
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
+{% endblock %}
+    <body>
+     {% block content %}
+ 
+ <!-- Popular news section  -->
+ <h3> general news</h3>
+
+    <ul>
+         {{ macro.displayNewsList(popular)}}
+        </ul>
+
+<h3> business</h3>
+<ul>
+    {{ macro.displayNewsList(upcoming)}}
+</ul>
+
+<h3>sports</h3>
+<ul>
+    {{ macro.displayNewsList(now_showing)}}
+</ul>
+{% endblock%}
+
+
+    </body>
+</html>
