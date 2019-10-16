@@ -1,9 +1,10 @@
-from flask import render_template
-from app import app
-from .request import get_sources,get_article
+from flask import render_template, redirect, url_for, request
+from . import main
+from ..models import News, Article
+from ..request import get_sources,get_article
 
 
-@app.route ('/')
+@main.route ('/')
 def index():
     '''
     View root page function that returns the index page and its data
@@ -14,10 +15,10 @@ def index():
     title = 'Home - Welcome to The best News Review Website Online'
 
 
-    return render_template('index.html', title = title, popular =popular_general, upcoming =upcoming_category, now_showing = now_showing_category )
+    return render_template('index.html', title = title,popular=popular_general, upcoming =upcoming_category, now_showing = now_showing_category )
 
 
-@app.route('/article/<id>')
+@main.route('/article/<id>')
 def article(id):
 
     '''

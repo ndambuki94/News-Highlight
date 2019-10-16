@@ -1,24 +1,16 @@
-{% macro displayNewsList(source_list) %}
+{% macro displayNewsList(source_results) %}
 
-    {% for article in source_list %}
+{% for article in source_results %}
 
-
-
-
-    <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 article-card">
+<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 article-card">
         
         <li class="text-center">
             <a href="/article/{{article.id}}">
-                {{ article.name}}</a>
+                {{ article.name}}
+            </a>
         </li>
-    </div>
+</div>
 
-
-
-
-
-
-
-    {% endfor %}
+{% endfor %}
 
 {% endmacro %}
